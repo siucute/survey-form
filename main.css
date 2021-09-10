@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+p, h1 {
+    font-size: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.header {
+    background: #010101;
+    height: 65px;
+    min-width: 0;
+}
+
+.editor-header {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.editor-header a {
+    text-decoration: none;
+}
+
+.logo {
+    display: block;
+    margin: 0 8px;
+    height: 65px;
+    width: 30px;
+}
+
+.logo .logo_small svg {
+    display: block;
+    fill: white;
+    width: 100%;
+    height: 100%;
+}
+
+.item-title {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 120px;
+}
+
+.itemtitle-text {
+    width: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+.itemtitle-title {
+    font-size: 1.3rem;
+    margin: 0 0 .1rem;
+    display: flex;
+    align-items: center;
+}
+
+.itemtitle-title a {
+    color: white;
+}
+
+.itemtitle-follow {
+    display: flex;
+    align-items: center;
+}
+
+.follow--link {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #9b9dad;
+    font-size: 0.9rem;
+    text-transform: none;
+    max-width: 100%;
+}
+
+.follow-button {
+    font-size: .7rem;
+    height: 16px;
+    margin-left: 6px;
+    background-color: #47cf73;
+    color: black;
+    border: none;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+.follow-button:hover {
+    background-color: #248c46;
+    color: white;
+}
+
+.follow-button--icon {
+    font-size: 0.6rem;
+}
+
+.button-module {
+    background: #444857;
+    color: white;
+    padding: 10px 16px;
+    margin: 1px 10px 1px 0;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button-module[data-color=green] {
+    background: #47cf73;
+    color: #000;
+}
+
+
+.button-module[data-color=green]:hover {
+    background: #248c46;
+}
+
+.button-module:hover,
+.button-module:focus {
+    background: #5a5f73;
+    color: white;
+    outline-offset: 3px;
+}
+body {
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-container {
+    width: 100%;
+    margin: 3rem auto 0 auto;
+}
+.main-header {
+    padding: 0 0.5rem;
+    margin-bottom: 1.8rem;
+    color: white;
+    font-size: 1.2rem;
+}
+.text-center {
+    text-align: center;
+}
+#title.text-center {
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 1.8rem;
+}
+#description.text-center {
+    font-style: italic;
+    font-weight: 200;
+}
+
+form {
+    background: rgba(27, 27, 50, 0.8);
+    border-radius: 0.25rem;
+    padding: 2.5rem 0.625rem;
+}
+.form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+}
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.4rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    padding: .2rem .7rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    align-items: center;
+    outline: none;
+}
+
+.input-radio, .input-checkbox {
+    display: inline-block;
+    margin-right: .625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+}
+
+.clue {
+    font-size: .9rem;
+    margin-left: .25rem;
+    color: #e4e4e4;
+}
+
+.input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: .625rem;
+    resize: vertical;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    background: #37af65;
+    padding: .7rem;
+    color: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+    border: none;
+}
+
+@media (max-width: 460px) {
+    body {
+        min-width: 320px;
+    }
+    #main {
+        margin: 0;
+    }
+    h1#title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    .itemtitle-title {
+        margin: 0 0 4px;
+        font-size: 1.1rem;
+    }
+    .follow--link {
+        font-size: .9rem;
+    }
+    .follow-button {
+        display: none;
+    }
+    .button-module {
+        padding: 6px 10px;
+        margin: 1px 5px 1px 0;
+        font-family: inherit;
+        font-size: .8rem;
+    }
+    html {
+        font-size: 14px;
+    }
+    form {
+        padding: 2rem;
+    }
+
+}
+
+@media (min-width: 461px) and (max-width: 719px) {
+    .itemtitle-title {
+        margin: 0 0 4px;
+        font-size: 1.1rem;
+    }
+    .follow--link {
+        font-size: .9rem;
+    }
+    .follow-button {
+        display: none;
+    }
+    .button-module {
+        padding: 6px 10px;
+        margin: 1px 5px 1px 0;
+        font-family: inherit;
+        font-size: .8rem;
+    }
+    form {
+        padding: 1.6rem;
+    }
+}
+
+@media (min-width: 720px) {
+    .main-container {
+        max-width: 720px;
+    }
+    form {
+        padding: 2.5rem;
+    }
+}
